@@ -1,0 +1,28 @@
+#!/bin/bash
+
+##
+## *****************************************************************************
+## 
+## Author:    Erik Ratcliffe
+## Date:      July 26, 2015
+## Project:   Program 1 - Chat server/client
+## Filename:  compileall
+## Class:     CS 372 (Summer 2015)
+##
+##
+## Overview:
+##    Chat server/client.
+##
+##    This script builds all of the C files in Project 1.
+##
+## *****************************************************************************
+##
+
+echo "Building object files for chatserve..."
+gcc -Wall -Werror -g -c chatserve.c
+gcc -Wall -Werror -g -c chat_func.c
+
+echo "Linking files for chatserve..."
+gcc -Wall -Werror chatserve.o chat_func.o -o chatserve
+
+echo -e "\nReady to roll!"
